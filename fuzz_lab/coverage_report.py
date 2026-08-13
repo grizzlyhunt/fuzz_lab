@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from proc import run
+from .proc import run
 
 __all__ = ["generate_coverage_report"]
 

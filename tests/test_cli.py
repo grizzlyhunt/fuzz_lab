@@ -13,9 +13,9 @@ from unittest import mock
 
 import pytest
 
-import cli
-from cli import file_extension, fuzzer_name
-from git_repo import SourceRepo
+from fuzz_lab import cli
+from fuzz_lab.cli import file_extension, fuzzer_name
+from fuzz_lab.git_repo import SourceRepo
 
 
 @pytest.fixture

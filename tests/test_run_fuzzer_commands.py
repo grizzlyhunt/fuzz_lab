@@ -11,7 +11,7 @@ from unittest import mock
 
 import pytest
 
-import run_fuzzer
+from fuzz_lab import run_fuzzer
 from asan_reports import DEFAULT_SUMMARY, PRIMITIVE_INDICES_FRAMES, SPARSE_INDICES_FRAMES, make_asan_log
 
 

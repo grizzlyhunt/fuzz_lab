@@ -2,8 +2,8 @@ import json
 import os
 from dataclasses import asdict, dataclass, field
 
-from corpus import CorpusSource
-from git_repo import SourceRepo
+from .corpus import CorpusSource
+from .git_repo import SourceRepo
 
 CONFIG_FILENAME = "fuzzer.json"
 _CONFIG_VERSION = 1

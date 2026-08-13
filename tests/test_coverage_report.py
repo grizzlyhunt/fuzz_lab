@@ -10,8 +10,8 @@ from unittest import mock
 
 import pytest
 
-import coverage_report
-from coverage_report import generate_coverage_report
+from fuzz_lab import coverage_report
+from fuzz_lab.coverage_report import generate_coverage_report
 
 
 @pytest.fixture

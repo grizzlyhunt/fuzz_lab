@@ -2,7 +2,7 @@ import os
 import re
 import subprocess
 
-from proc import run
+from .proc import run
 
 __all__ = ["run_fuzz_target", "reproduce_crash", "minimize_crash", "triage_crash", "dedupe_crashes"]
 

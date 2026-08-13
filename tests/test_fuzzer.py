@@ -12,11 +12,11 @@ from unittest import mock
 
 import pytest
 
-import fuzzer as fuzzer_module
-from corpus import CorpusSource
-from fuzzer import Fuzzer, fuzzer_dir_for
-from fuzzer_config import FuzzerConfig
-from git_repo import SourceRepo
+from fuzz_lab import fuzzer as fuzzer_module
+from fuzz_lab.corpus import CorpusSource
+from fuzz_lab.fuzzer import Fuzzer, fuzzer_dir_for
+from fuzz_lab.fuzzer_config import FuzzerConfig
+from fuzz_lab.git_repo import SourceRepo
 
 REPO = SourceRepo("cgltf", "https://example.invalid/cgltf")
 ASSETS = SourceRepo("assets", "https://example.invalid/assets")

@@ -6,14 +6,14 @@
   "venvPath": ".",
   "venv": ".venv",
 
-  // Mirrors pythonpath in pytest.ini: the project modules sit at the repository root and
-  // the shared ASan report builders in tests/, so both directories have to be importable
-  // for the checker the same way they are at runtime.
+  // Mirrors pythonpath in pytest.ini: the fuzz_lab package is imported from the repository
+  // root and the shared ASan report builders from tests/, so both directories have to be
+  // importable for the checker the same way they are at runtime.
   "extraPaths": [".", "tests"],
 
-  // cgltf_fuzz holds vendored C sources and git checkouts; .venv holds third-party
-  // packages. Neither is code this project type-checks.
-  "exclude": [".venv", "cgltf_fuzz", "**/__pycache__"],
+  // *_fuzz/ directories hold vendored C sources and git checkouts created by the tool
+  // itself; .venv holds third-party packages. Neither is code this project type-checks.
+  "exclude": [".venv", "**/*_fuzz", "**/__pycache__"],
 
   "typeCheckingMode": "standard"
 }

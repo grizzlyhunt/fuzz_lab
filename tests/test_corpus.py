@@ -10,8 +10,8 @@ from unittest import mock
 
 import pytest
 
-import corpus
-from corpus import CorpusSource, minimize_corpus, source_prefix, sync_corpus_source
+from fuzz_lab import corpus
+from fuzz_lab.corpus import CorpusSource, minimize_corpus, source_prefix, sync_corpus_source
 
 
 @pytest.fixture

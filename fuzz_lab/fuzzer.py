@@ -1,12 +1,12 @@
 import os
 import shutil
 
-from build import build_coverage_target, build_fuzz_target, coverage_target_path, fuzz_target_path
-from corpus import CorpusSource, minimize_corpus, sync_corpus_source
-from coverage_report import generate_coverage_report
-from fuzzer_config import FuzzerConfig
-from git_repo import checkout_repo
-from run_fuzzer import dedupe_crashes, minimize_crash, reproduce_crash, run_fuzz_target, triage_crash
+from .build import build_coverage_target, build_fuzz_target, coverage_target_path, fuzz_target_path
+from .corpus import CorpusSource, minimize_corpus, sync_corpus_source
+from .coverage_report import generate_coverage_report
+from .fuzzer_config import FuzzerConfig
+from .git_repo import checkout_repo
+from .run_fuzzer import dedupe_crashes, minimize_crash, reproduce_crash, run_fuzz_target, triage_crash
 
 _HARNESS_TEMPLATE = """\
 #include <stddef.h>

@@ -2,7 +2,7 @@ import os
 import shutil
 from dataclasses import dataclass
 
-from proc import run
+from .proc import run
 
 __all__ = ["CorpusSource", "sync_corpus_source", "minimize_corpus"]
 

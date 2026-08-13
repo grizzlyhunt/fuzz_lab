@@ -10,9 +10,9 @@ import os
 
 import pytest
 
-from corpus import CorpusSource
-from fuzzer_config import CONFIG_FILENAME, FuzzerConfig
-from git_repo import SourceRepo
+from fuzz_lab.corpus import CorpusSource
+from fuzz_lab.fuzzer_config import CONFIG_FILENAME, FuzzerConfig
+from fuzz_lab.git_repo import SourceRepo
 
 
 @pytest.fixture

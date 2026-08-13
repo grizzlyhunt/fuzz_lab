@@ -8,7 +8,7 @@ import os
 import subprocess
 from unittest import mock
 
-import proc
+from fuzz_lab import proc
 
 
 def test_echoes_the_command_line_before_running_it(capsys):

@@ -8,7 +8,7 @@ suite. Everything here works off report text on disk; no subprocess is involved.
 import os
 from unittest import mock
 
-import run_fuzzer
+from fuzz_lab import run_fuzzer
 from asan_reports import (
     ALLOCATION_FRAMES,
     DEFAULT_SUMMARY,

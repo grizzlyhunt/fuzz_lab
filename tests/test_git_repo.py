@@ -11,8 +11,8 @@ from unittest import mock
 
 import pytest
 
-import git_repo
-from git_repo import SourceRepo, checkout_repo
+from fuzz_lab import git_repo
+from fuzz_lab.git_repo import SourceRepo, checkout_repo
 
 
 class TestSourceRepo:

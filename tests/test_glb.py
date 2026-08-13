@@ -6,7 +6,7 @@ and slices bytes, so every test builds its own minimal .glb file on disk via _gl
 
 import pytest
 
-import glb
+from fuzz_lab import glb
 
 
 def _glb_bytes(json_bytes, bin_bytes=b"", magic=b"glTF", chunk_type=b"JSON", chunk_length=None):

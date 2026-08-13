@@ -1,6 +1,6 @@
 import os
 
-from proc import run
+from .proc import run
 
 __all__ = [
     "build_fuzz_target",

@@ -10,9 +10,9 @@ from unittest import mock
 
 import pytest
 
-import build
-from build import build_coverage_target, build_fuzz_target, coverage_target_path, fuzz_target_path
-from git_repo import SourceRepo
+from fuzz_lab import build
+from fuzz_lab.build import build_coverage_target, build_fuzz_target, coverage_target_path, fuzz_target_path
+from fuzz_lab.git_repo import SourceRepo
 
 
 @pytest.fixture

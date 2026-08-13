@@ -1,7 +1,7 @@
 import os
 from dataclasses import dataclass
 
-from proc import run
+from .proc import run
 
 __all__ = ["SourceRepo", "checkout_repo"]
 
