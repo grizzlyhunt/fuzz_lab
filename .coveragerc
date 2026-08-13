@@ -1,0 +1,23 @@
+[run]
+# Measure the project modules sitting at the repository root. The omit list below keeps
+# everything that is not project code under test out of the percentage, so the number
+# reflects the code we actually own.
+source = .
+omit =
+    tests/*
+    conftest.py
+    .venv/*
+    # Vendored fuzz-target sources and build artifacts: C code and third-party checkouts,
+    # not Python we could cover.
+    cgltf_fuzz/*
+
+[report]
+# Show which lines are missing rather than only a total, and skip files that are fully
+# covered so the report stays focused on what still needs tests.
+show_missing = True
+skip_covered = True
+
+exclude_also =
+    # The script entry point only runs when cli.py is executed directly, never under
+    # pytest. Covering it would mean a test that exists purely to touch one line.
+    if __name__ == .__main__.:

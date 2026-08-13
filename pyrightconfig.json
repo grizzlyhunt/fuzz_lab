@@ -1,0 +1,19 @@
+{
+  // Type-checking configuration, read by both the pyright CLI and Pylance in VSCode.
+
+  // Without these, neither tool finds pytest -- it lives in the project-local venv, not
+  // in the system Python -- and every test file reports an unresolved import.
+  "venvPath": ".",
+  "venv": ".venv",
+
+  // Mirrors pythonpath in pytest.ini: the project modules sit at the repository root and
+  // the shared ASan report builders in tests/, so both directories have to be importable
+  // for the checker the same way they are at runtime.
+  "extraPaths": [".", "tests"],
+
+  // cgltf_fuzz holds vendored C sources and git checkouts; .venv holds third-party
+  // packages. Neither is code this project type-checks.
+  "exclude": [".venv", "cgltf_fuzz", "**/__pycache__"],
+
+  "typeCheckingMode": "standard"
+}
